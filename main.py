@@ -104,7 +104,7 @@ def show_help(cl_sc = False):
 quitters:list = [
 "q", "quit", "exit", "halt", "die", "ki", "kilép", "kilépés", "vége", "ende", "konyec", "egzit",
 ]
-max_rounds:int = 2
+max_rounds:int = 5
 valid_answers:list = []
 debug = False
 
