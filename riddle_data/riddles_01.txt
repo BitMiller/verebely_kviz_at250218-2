@@ -1,0 +1,4 @@
+Kérdés 1.*/*Válasz 1.*/*Válasz 2.*/*Válasz 3.*/*Válasz 4.*/*1,2
+Kérdés 2.*/*Válasz 1.*/*Válasz 2.*/*Válasz 3.*/*Válasz 4.*/*1
+Kérdés 3.*/*Válasz 1.*/*Válasz 2.*/*Válasz 3.*/*Válasz 4.*/*4,2
+Kérdés 4.*/*Válasz 1.*/*Válasz 2.*/*Válasz 3.*/*Válasz 4.*/*1,2,4

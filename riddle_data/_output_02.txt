@@ -1,0 +1,25 @@
+1#Kérdés 1#Rossz válasz (1.)$Rossz válasz (2.)$Jó válasz (3.)#3
+1#Kérdés 2#Jó válasz (1.)$Rossz válasz (2.)$Jó válasz (3.)$Jó válasz (4.)#1$3$4
+1#Kérdés 3#Jó válasz (1.)$Jó válasz (2.)$Rossz válasz (3.)$Jó válasz (4.)#1$2$4
+1#Kérdés 4#Rossz válasz (1.)$Jó válasz (2.)$Rossz válasz (3.)$Jó válasz (4.)#2$4
+1#Kérdés 5#Rossz válasz (1.)$Rossz válasz (2.)#
+2#Kérdés 6#Jó válasz (1.)$Rossz válasz (2.)$Jó válasz (3.)$Rossz válasz (4.)#1$3
+2#Kérdés 7#Jó válasz (1.)$Jó válasz (2.)$Rossz válasz (3.)#1$2
+2#Kérdés 8#Rossz válasz (1.)$Jó válasz (2.)#2
+2#Kérdés 9#Jó válasz (1.)$Rossz válasz (2.)$Jó válasz (3.)#1$3
+2#Kérdés 10#Rossz válasz (1.)$Rossz válasz (2.)$Jó válasz (3.)#3
+3#Kérdés 11#Jó válasz (1.)$Jó válasz (2.)$Rossz válasz (3.)#1$2
+3#Kérdés 12#Jó válasz (1.)$Rossz válasz (2.)$Jó válasz (3.)$Rossz válasz (4.)#1$3
+3#Kérdés 13#Rossz válasz (1.)$Jó válasz (2.)$Jó válasz (3.)#2$3
+3#Kérdés 14#Jó válasz (1.)#1
+3#Kérdés 15#Jó válasz (1.)$Jó válasz (2.)$Rossz válasz (3.)#1$2
+4#Kérdés 16#Jó válasz (1.)$Rossz válasz (2.)$Jó válasz (3.)$Rossz válasz (4.)#1$3
+4#Kérdés 17#Rossz válasz (1.)$Rossz válasz (2.)$Jó válasz (3.)#3
+4#Kérdés 18#Rossz válasz (1.)$Rossz válasz (2.)$Rossz válasz (3.)$Jó válasz (4.)#4
+4#Kérdés 19#Jó válasz (1.)$Jó válasz (2.)$Rossz válasz (3.)#1$2
+4#Kérdés 20#Rossz válasz (1.)$Rossz válasz (2.)$Jó válasz (3.)#3
+5#Kérdés 21#Rossz válasz (1.)$Jó válasz (2.)$Jó válasz (3.)$Rossz válasz (4.)#2$3
+5#Kérdés 22#Rossz válasz (1.)$Rossz válasz (2.)$Jó válasz (3.)$Rossz válasz (4.)#3
+5#Kérdés 23#Rossz válasz (1.)$Jó válasz (2.)$Rossz válasz (3.)#2
+5#Kérdés 24#Jó válasz (1.)$Jó válasz (2.)$Jó válasz (3.)#1$2$3
+5#Kérdés 25#Rossz válasz (1.)$Rossz válasz (2.)$Rossz válasz (3.)#

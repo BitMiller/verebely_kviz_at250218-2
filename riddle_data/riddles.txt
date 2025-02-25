@@ -1,0 +1,25 @@
+1#Mi a Naprendszer legnagyobb bolygója?#Mars$Merkúr$Föld$Vénusz$Planet X#5  
+1#Melyik évben történt az 1848-as forradalom Magyarországon?#1847$1848$1849$1850#2$3  
+1#Mi a só képlete?#H2O$CO2$SO$NaCl#3$4  
+1#Melyik állat emlős?#Kígyó$Macska$Krokodil$Delfin$Dumb és Dumber#2$4$5  
+1#Melyik ország fővárosa Tápiószecső?#Ausztria$Hollandia$Szlovákia$Románia#  
+2#Melyik találmány köthető Edisonhoz?#Telefon$Villanykörte$Diktafon$Stenciles sokszorosítógép$Akkumulátortelep#1$2$3$4$5  
+2#Igaz-e?#Te most rossz választ fogsz adni.#  
+2#Ki írta a Hamletet?#Shakespeare$Goethe$Petőfi Sándor$Én#1  
+2#Hány fokra van szükség a víz forralásához tengerszinten?#90°C$100°C$110°C$Kuktában, vagy anélkül?#2$4  
+2#Melyik elem vegyjele az "O"?#Oxigén$Ón$Ólom$Omnomnom#1  
+3#Melyik bolygó nincs a Naprendszerben?#Merkúr$Plútó$Proxima Centauri b$Nibiru#3  
+3#How much wood would a woodchuck chuck if a woodchuck could chuck wood?#N/A$25 döbrögi ölnyit$Was makogß?#2,3  
+3#Már a spájzban vannak az oroszok?#Igen$Nem$Attól függ"Majd a tizedes úr!#3$4  
+3#Melyik az egyetlen páros prímszám?#cos 0° + sin 0°$e^ln2$2φ+(3−2φ)$0#2  
+3#Melyik földrész a legnagyobb területű?#Afrika$Európa$Ázsia$Amerika$E' itt a kert...#3$5  
+4#Melyik a leghosszabb folyó a világon?#Amazonas$Nílus$Duna#  
+4#Milyen állat a panda?#Medve$Macska$Rovar$Cuki#1$4  
+4#Mi a fő összetevője a levegőnek?#Oxigén$Szén-dioxid$Nitrogén$Babgáz#3$4  
+4#Melyik sportágban használnak ütőt és labdát?#Baseball$Röplabda$Tenisz$Tollas#1$3  
+4#Melyik fém nem mágneses?#Vas$Alumínium$Nikkel$Réz$29Cr-4Mo-2Ni#2$4  
+5#Melyik az emberi test legnagyobb szerve?#Szív$Gyomor$Tüdő$Arc$Kinek melyik#5  
+5#Melyik híres tudós fejlesztette ki a relativitáselméletet?#Bolyai$Einstein$Tesla$Lorentz#1$2$3$4  
+5#Milyen anyagból készül a gyémánt?#Szén$Vas$Kvarc$Arany$Hörcsög#1  
+5#Melyik évben ért véget a második világháború?#1849$1945$1950$2030#2  
+5#Melyik bolygón található az Olympus Mons, a Naprendszer legmagasabb hegye?#Föld$Mars$Vénusz$Jupiter#2  

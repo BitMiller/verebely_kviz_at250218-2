@@ -1,0 +1,25 @@
+1#Mi a Naprendszer legnagyobb bolygója?#Mars$Jupiter$Föld$Vénusz#2  
+1#Melyik évben történt az 1848-as forradalom Magyarországon?#1847$1848$1849$1850#2  
+1#Mi a víz kémiai képlete?#H2O$CO2$O2$NaCl#1  
+1#Melyik állat emlős?#Kígyó$Macska$Krokodil#2  
+1#Melyik ország fővárosa Budapest?#Ausztria$Magyarország$Szlovákia$Románia#2  
+2#Melyik találmány köthető Edisonhoz?#Telefon$Villanykörte$Repülőgép$Gőzgép#2  
+2#Milyen szín keveréke adja a zöldet?#Piros és kék$Kék és sárga$Piros és sárga$Fehér és fekete#2  
+2#Ki írta a Hamletet?#Shakespeare$Goethe$Petőfi Sándor$Arisztotelész#1  
+2#Hány fokra van szükség a víz forralásához tengerszinten?#90°C$100°C$110°C#2  
+2#Melyik elem vegyjele az "O"?#Oxigén$Arany$Ón$Ezüst#1  
+3#Melyik bolygó nincs a Naprendszerben?#Merkúr$Plútó$Proxima Centauri b#3  
+3#Mi a kémiai jele a nátriumnak?#Na$N$Ni#1  
+3#Hány szívkamrája van az embernek?#1$2$3$4#4  
+3#Melyik az egyetlen páros prímszám?#1$2$3$5#2  
+3#Melyik földrész a legnagyobb területű?#Afrika$Európa$Ázsia$Amerika#3  
+4#Melyik a leghosszabb folyó a világon?#Amazonas$Nílus$Duna#2  
+4#Milyen állat a panda?#Medve$Macska$Rovar$Hüllő#1  
+4#Mi a fő összetevője a levegőnek?#Oxigén$Szén-dioxid$Nitrogén#3  
+4#Melyik sportágban használnak ütőt és labdát?#Kosárlabda$Röplabda$Tenisz$Úszás#3  
+4#Melyik fém nem mágneses?#Vas$Nikkel$Réz#3  
+5#Melyik az emberi test legnagyobb szerve?#Szív$Tüdő$Bőr$Máj#3  
+5#Melyik híres tudós fejlesztette ki a relativitáselméletet?#Newton$Einstein$Tesla$Hawking#2  
+5#Milyen anyagból készül a gyémánt?#Szén$Vas$Kvarc$Arany#1  
+5#Melyik évben ért véget a második világháború?#1943$1945$1950#2  
+5#Melyik bolygón található az Olympus Mons, a Naprendszer legmagasabb hegye?#Föld$Mars$Vénusz$Jupiter#2  
