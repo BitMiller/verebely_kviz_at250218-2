@@ -16,7 +16,7 @@
 4#Melyik a leghosszabb folyó a világon?#Amazonas$Nílus$Duna#  
 4#Milyen állat a panda?#Medve$Macska$Rovar$Cuki#1$4  
 4#Mi a fő összetevője a levegőnek?#Oxigén$Szén-dioxid$Nitrogén$Babgáz#3$4  
-4#Melyik sportágban használnak ütőt és labdát?#Baseball$Röplabda$Tenisz$Tollas#1$3  
+4#Melyik játékban használnak ütőt és labdát?#Star Citizen$Pétanque$Pillangóúszás ütővel és labdával$Tollaslabda#3  
 4#Melyik fém nem mágneses?#Vas$Alumínium$Nikkel$Réz$29Cr-4Mo-2Ni#2$4  
 5#Melyik az emberi test legnagyobb szerve?#Szív$Gyomor$Tüdő$Arc$Kinek melyik#5  
 5#Melyik híres tudós fejlesztette ki a relativitáselméletet?#Bolyai$Einstein$Tesla$Lorentz#1$2$3$4  
