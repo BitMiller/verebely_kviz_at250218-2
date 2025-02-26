@@ -20,13 +20,13 @@ class Riddle:
  def __init__(self, riddle_raw_line):
   global delimiter1, delimiter2
   riddle_raw_line = riddle_raw_line.split(delimiter1)
-  #dprint(f"len(riddle_raw_line): {len(riddle_raw_line)}", debug)
+  #dprint(f"len(riddle_raw_line): {len(riddle_raw_line)}")
   self.hardness = int(riddle_raw_line[0])
   self.question = riddle_raw_line[1]
   self.answers:list = riddle_raw_line[2].split(delimiter2)
   #self.solutions:list = list(map(int, riddle_raw_line[3].split(delimiter2))) # error if last line in file has no solutions' data ( .split() returns [''] string )
   self.solutions:list = riddle_raw_line[3].split(delimiter2)
-  dprint(f"self.solutions: {self.solutions}", debug)
+  dprint(f"self.solutions: {self.solutions}")
   empty_solution:bool = False
   if len(self.solutions) == 1:
    try:
@@ -36,12 +36,12 @@ class Riddle:
     self.solutions = []
   if not empty_solution:
    for i in range(len(self.solutions)):
-    dprint(f"self.solutions[i].strip(): {(self.solutions[i].strip())}", debug)
+    dprint(f"self.solutions[i].strip(): {(self.solutions[i].strip())}")
     try:
      self.solutions[i] = int(self.solutions[i].strip())
     except ValueError:
      self.solutions.pop(i)
-  dprint(f"Check: {self.solutions}", debug)
+  dprint(f"Check: {self.solutions}")
 
  def __str__(self):
   ret = f"Question: {self.question}"
@@ -60,9 +60,16 @@ class Gamer:
 
 ##########
 
+class Points:
+ hit:int = 1
+ missed:int = -1
+ mishit:int = -2
+
+##########
+
 def validate_answer(ans, answers_num) -> int:
- global valid_answers, quitters, delimiter3
- valid_answers = []
+ global quitters, delimiter3
+ guesses = []
 
  ans = ans.split(delimiter3)
  for i in range(len(ans)):
@@ -70,22 +77,20 @@ def validate_answer(ans, answers_num) -> int:
 
  if len(ans) == 1:
   if ans[0] in quitters:
-   return 0
+   return [0]
   if ans[0] == "0":
-   return 1
+   return []
 
  for a in range(len(ans)):
   try: ans[a] = int(ans[a])
   except ValueError:
-   valid_answers = []
-   return -1
-  if ans[a] in valid_answers or ans[a] < 1 or ans[a] > answers_num:
-   valid_answers = []
-   return -1
+   return [-1]
+  if ans[a] in guesses or ans[a] < 1 or ans[a] > answers_num:
+   return [-1]
   else:
-   valid_answers.append(ans[a])
+   guesses.append(ans[a])
 
- return 1
+ return guesses
 
 ##########
 
@@ -104,14 +109,17 @@ def show_help(cl_sc = False):
 quitters:list = [
 "q", "quit", "exit", "halt", "die", "ki", "kilép", "kilépés", "vége", "ende", "konyec", "egzit",
 ]
-max_rounds:int = 5
-valid_answers:list = []
-debug = False
 
-if debug:
- riddles_filename = "riddles_for_debug.txt"
+if DEBUG: max_rounds = MAX_ROUNDS_DEBUG_MODE
+else: max_rounds = MAX_ROUNDS_NORMAL_MODE
+
+if DEBUG:
+ riddles_filename = RIDDLES_FILENAME_DEBUG_MODE
 else:
- riddles_filename = "riddles.txt"
+ riddles_filename = RIDDLES_FILENAME_NORMAL_MODE
+
+valid_answers:list = []
+
 
 os.chdir(os.path.dirname(__file__))
 
@@ -180,55 +188,45 @@ while game_is_on and round_num < max_rounds:
  print("Válaszod: ", end="")
 
 # Getting answers:
- res:int = -1
+ guesses = [-1]
 
 # Check for invalid input:
- while res == -1:
-  res = validate_answer(input(), len(riddles[new_riddle_index].answers))
-  if res == -1: print("Nomég1x: ", end="")
+ while guesses == [-1]:
+  guesses = validate_answer(input(), len(riddles[new_riddle_index].answers))
+  if guesses == [-1]: print("Nomég1x: ", end="")
 
+# Gamer quitted:
+ if guesses == [0]: game_is_on = False
 
 # We've got valid answers:
- if res == 1:
+ else:
   question_score:int = 0
-  dprint(f"valid_answers: {valid_answers}", debug)
-# Check if the guesses are correct:
-  if len(valid_answers) == 0:
-   if len(riddles[new_riddle_index].solutions) == 0:
-    question_score = 1
-   else:
-    question_score = -len(riddles[new_riddle_index].solutions)
-  else:
-   #dprint("Non-empty answer.", debug)
-   for i in range(len(valid_answers)):
-    #dprint(f"for loop i: {i}", debug)
-    #dprint(f"riddles[new_riddle_index].solutions: {riddles[new_riddle_index].solutions}", debug)
-    if randomed_answers[valid_answers[i]-1]+1 in riddles[new_riddle_index].solutions:
-     question_score += 1
-     dprint(f"Found solution:{valid_answers[i]} at i:{i}", debug)
-     #dprint(f"i: {i}", debug)
-     dprint(f"randomed_answers[valid_answers[i]-1]+1: {randomed_answers[valid_answers[i]-1]+1}", debug)
+  tmp_sol = list(riddles[new_riddle_index].solutions)
+  dprint(f"tmp_sol: {tmp_sol}")
 
-# Check if there are incorrect/blind guesses.
-# The rest of valid answers are incorrect:
-   dprint(f"question_score: {question_score}", debug)
-   dprint(f"len(valid_answers): {len(valid_answers)}", debug)
-   dprint(f"len(riddles[new_riddle_index].solutions): {len(riddles[new_riddle_index].solutions)}", debug)
-   dprint(f"(len(valid_answers)-question_score)*2: {(len(valid_answers)-question_score)*2}", debug)
-   if question_score < len(riddles[new_riddle_index].solutions) and question_score < len(valid_answers) or len(valid_answers) > len(riddles[new_riddle_index].solutions):
-    question_score -= (len(valid_answers)-question_score)*2
-    dprint(f"question_score: {question_score}", debug)
-   elif len(valid_answers) < len(riddles[new_riddle_index].solutions):
-    question_score -= len(riddles[new_riddle_index].solutions)-len(valid_answers)
+  if guesses == [] and riddles[new_riddle_index].solutions == []:
+   dprint("Helyes, hogy nincs helyes válasz!")
+   question_score = 1
+  else:
+   dprint(f"Van némi válasz.")
+   for i in range(len(guesses)):
+    orig_sol_val = randomed_answers[guesses[i]-1]+1
+    dprint(f"orig_sol_val|i: {orig_sol_val}|{i}")
+    if orig_sol_val in tmp_sol:
+     dprint("+1p!")
+     question_score += 1
+     tmp_sol.pop(tmp_sol.index(orig_sol_val))
+    else:
+     question_score -= 2
+     dprint("-2p!")
+   question_score -= len(tmp_sol)
+   dprint(f"Ennyi jó válasz maradt: len(tmp_sol): {len(tmp_sol)}")
+
 # Multiple up the scores:
   question_score *= riddles[new_riddle_index].hardness
   gamer.score += question_score
-
   print(f"Ebben a körben {question_score} pontot sikerült gyűjteni.")
   print(f"Most összesen {gamer.score} pontod van.")
-
-# res == 0, Gamer quitted:
- else: game_is_on = False
 
 print(f"\nJó játék volt! Szevasz, {gamer.name}!")
 

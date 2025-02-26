@@ -1,5 +1,6 @@
 
 import os
+from my.constants import *
 
 def clrscr():
  os.system("cls" if os.name == "nt" else "clear")
@@ -18,8 +19,8 @@ def printxy(s, x, y):
 
 ##########
 
-def dprint(s, debug):
- if debug:
-  print("DBG: "+s)
+def dprint(s, d_end="\n"):
+ if DEBUG:
+  print("DBG: "+str(s), end=str(d_end))
 
 ##########
