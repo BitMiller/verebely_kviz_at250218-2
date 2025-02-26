@@ -11,21 +11,18 @@ import os, sys, shutil, random
 from my.screen import *
 
 # Global variables:
-delimiter1 = "#"
-delimiter2 = "$"
-delimiter3 = ","
 scr_x, scr_y = shutil.get_terminal_size()
 
 class Riddle:
  def __init__(self, riddle_raw_line):
-  global delimiter1, delimiter2
-  riddle_raw_line = riddle_raw_line.split(delimiter1)
+  global DELIMITER_1, DELIMITER_2
+  riddle_raw_line = riddle_raw_line.split(DELIMITER_1)
   #dprint(f"len(riddle_raw_line): {len(riddle_raw_line)}")
   self.hardness = int(riddle_raw_line[0])
   self.question = riddle_raw_line[1]
-  self.answers:list = riddle_raw_line[2].split(delimiter2)
-  #self.solutions:list = list(map(int, riddle_raw_line[3].split(delimiter2))) # error if last line in file has no solutions' data ( .split() returns [''] string )
-  self.solutions:list = riddle_raw_line[3].split(delimiter2)
+  self.answers:list = riddle_raw_line[2].split(DELIMITER_2)
+  #self.solutions:list = list(map(int, riddle_raw_line[3].split(DELIMITER_2))) # error if last line in file has no solutions' data ( .split() returns [''] string )
+  self.solutions:list = riddle_raw_line[3].split(DELIMITER_2)
   dprint(f"self.solutions: {self.solutions}")
   empty_solution:bool = False
   if len(self.solutions) == 1:
@@ -68,10 +65,10 @@ class Points:
 ##########
 
 def validate_answer(ans, answers_num) -> int:
- global quitters, delimiter3
+ global quitters, DELIMITER_3
  guesses = []
 
- ans = ans.split(delimiter3)
+ ans = ans.split(DELIMITER_3)
  for i in range(len(ans)):
   ans[i] = ans[i].strip().lower()
 
@@ -214,12 +211,12 @@ while game_is_on and round_num < max_rounds:
     dprint(f"orig_sol_val|i: {orig_sol_val}|{i}")
     if orig_sol_val in tmp_sol:
      dprint("+1p!")
-     question_score += 1
+     question_score += Points.hit
      tmp_sol.pop(tmp_sol.index(orig_sol_val))
     else:
-     question_score -= 2
+     question_score += Points.mishit
      dprint("-2p!")
-   question_score -= len(tmp_sol)
+   question_score += len(tmp_sol)*Points.missed
    dprint(f"Ennyi jó válasz maradt: len(tmp_sol): {len(tmp_sol)}")
 
 # Multiple up the scores:
