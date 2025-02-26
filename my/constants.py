@@ -1,7 +1,10 @@
 
-DEBUG:bool = True
+DEBUG:bool = False
 MAX_ROUNDS_NORMAL_MODE = 10
 MAX_ROUNDS_DEBUG_MODE = 10
 RIDDLES_FILENAME_NORMAL_MODE = "riddles.txt"
 RIDDLES_FILENAME_DEBUG_MODE = "riddles_for_debug.txt"
 
+DELIMITER_1 = "#"
+DELIMITER_2 = "$"
+DELIMITER_3 = ","
