@@ -1,6 +1,10 @@
 ##########
 #TODO:
-#
+# - User selectable game parameters
+# - Option for more informative feedback on gained points
+# - Localization
+# - Fancier GUI
+# - Scoring table and its output to file
 ##########
 #DESCRIPTION:
 # - screen max chars: 56x33
@@ -137,10 +141,6 @@ riddles:list = []
 for r in raw_data:
  riddles.append(Riddle(r))
 
-score:int = 0
-riddles_selected:list = []
-game_is_on:bool = True
-
 clrscr()
 
 print("Üdvözöllek! Játsszunk!")
@@ -151,29 +151,39 @@ gamer = Gamer(input("A neved, lécci! : "))
 # Game's main cycle:
 
 round_num:int = 0
+riddles_selected:list = []
+game_is_on:bool = True
 
 while game_is_on and round_num < max_rounds:
  round_num += 1
 
 # Randomly select a riddle what haven't appeared yet in this game:
- new_riddle_ok:bool = False
- while not new_riddle_ok:
-  new_riddle_index = random.randrange(0, len(riddles))
-  if new_riddle_index not in riddles_selected:
-   new_riddle_ok = True
+ #if True:
+ if RANDOMIZE_QUESTIONS:
+  new_riddle_ok:bool = False
+  while not new_riddle_ok:
+   new_riddle_index = random.randrange(0, len(riddles))
+   if new_riddle_index not in riddles_selected:
+    new_riddle_ok = True
+ else:
+  new_riddle_index = round_num - 1
  riddles_selected.append(new_riddle_index)
  if len(riddles_selected) >= len(riddles):
   game_is_on = False
 
 # Generate answers' random sequence:
- randomed_answers:list = []
- while len(randomed_answers) < len(riddles[new_riddle_index].answers):
-  new_answer_ok = False
-  while not new_answer_ok:
-   new_answer_index = random.randrange(0, len(riddles[new_riddle_index].answers))
-   if new_answer_index not in randomed_answers:
-    new_answer_ok = True
-  randomed_answers.append(new_answer_index)
+ #if True:
+ if RANDOMIZE_ANSWERS:
+  randomed_answers:list = []
+  while len(randomed_answers) < len(riddles[new_riddle_index].answers):
+   new_answer_ok = False
+   while not new_answer_ok:
+    new_answer_index = random.randrange(0, len(riddles[new_riddle_index].answers))
+    if new_answer_index not in randomed_answers:
+     new_answer_ok = True
+   randomed_answers.append(new_answer_index)
+ else:
+  randomed_answers = list(range(0, len(riddles[new_riddle_index].answers)))
 
 # Outputting the riddle:
  print(f"\n{round_num}. kérdés:")
